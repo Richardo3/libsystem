@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'users.apps.UsersConfig',
+    'books.apps.BooksConfig',
 ]
 
 MIDDLEWARE = [
@@ -48,6 +49,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'users.middleware.my_middleware',
 ]
 
 ROOT_URLCONF = 'libsystem.urls'
@@ -76,8 +78,12 @@ WSGI_APPLICATION = 'libsystem.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'HOST': '127.0.0.1',
+        'PORT': 3306,
+        'USER': 'root',
+        'PASSWORD': 'mysql',
+        'NAME': 'libsystem',
     }
 }
 
@@ -123,3 +129,19 @@ STATIC_URL = '/static/'  # 访问静态文件的URL前缀
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static_files')
 ]
+
+CACHES = {
+    "default":{
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": "redis://127.0.0.1:6379/1",
+        "OPTIONS": {
+            # django使用redis的默认客户端来进行操作
+            "CLENT_CLASS": "django_redis.client.DefaultClient",
+        }
+    }
+}
+
+# 定义一个cache(本地缓存来存储信息)
+SESSION_ENGINE = "django.contrib.sessions.backends.cache"
+# 本地的session使用的本地缓存名称是default
+SESSION_CACHE_ALIAS = 'default'
