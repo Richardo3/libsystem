@@ -2,10 +2,11 @@ from django.db import models
 
 # Create your models here.
 class BookInfo(models.Model):
+    branking = models.SmallIntegerField(verbose_name='排名')
     btitle = models.CharField(max_length=20, verbose_name='名称')
-    bpub_date = models.DateField(verbose_name='发布日期')
+    bauthor = models.CharField(max_length=20, verbose_name='作者')
+    btype = models.CharField(max_length=20, verbose_name='分类')
     bread = models.IntegerField(default=0, verbose_name='阅读量')
-    bcomment = models.IntegerField(default=0, verbose_name='评论量')
     is_delete = models.BooleanField(default=False, verbose_name='逻辑删除')
 
     # 指定数据库中的表名

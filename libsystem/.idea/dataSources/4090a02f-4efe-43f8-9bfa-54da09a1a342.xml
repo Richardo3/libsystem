@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="libsystem@localhost [2]">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.0">
+    <root id="1"/>
+    <schema id="2" parent="1" name="libsystem">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="aaaaaa"/>
+    <schema id="4" parent="1" name="abdb"/>
+    <schema id="5" parent="1" name="book"/>
+    <schema id="6" parent="1" name="company"/>
+    <schema id="7" parent="1" name="db"/>
+    <schema id="8" parent="1" name="django_demo"/>
+    <schema id="9" parent="1" name="DRF"/>
+    <schema id="10" parent="1" name="DRF_books"/>
+    <schema id="11" parent="1" name="examimation"/>
+    <schema id="12" parent="1" name="info33"/>
+    <schema id="13" parent="1" name="information"/>
+    <schema id="14" parent="1" name="information_schema"/>
+    <schema id="15" parent="1" name="info_py33"/>
+    <schema id="16" parent="1" name="JDDB"/>
+    <schema id="17" parent="1" name="mdm"/>
+    <schema id="18" parent="1" name="meiduomall"/>
+    <schema id="19" parent="1" name="meiduo_mall"/>
+    <schema id="20" parent="1" name="meiduo_mall32"/>
+    <schema id="21" parent="1" name="migrate_temp"/>
+    <schema id="22" parent="1" name="mysql"/>
+    <schema id="23" parent="1" name="performance_schema"/>
+    <schema id="24" parent="1" name="proxies"/>
+    <schema id="25" parent="1" name="python18"/>
+    <schema id="26" parent="1" name="python32"/>
+    <schema id="27" parent="1" name="python33"/>
+    <schema id="28" parent="1" name="python_db"/>
+    <schema id="29" parent="1" name="sys"/>
+    <schema id="30" parent="1" name="temp_python33"/>
+    <schema id="31" parent="1" name="test_python33"/>
+    <schema id="32" parent="1" name="xadministrate"/>
+    <schema id="33" parent="1" name="xj33"/>
+  </database-model>
+</dataSource>
